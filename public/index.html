@@ -9,35 +9,374 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
+    />
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      npm
+      sta
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <script>
+      var words = ["Your Growth Our Commitment"],
+        part,
+        i = 0,
+        offset = 0,
+        len = words.length,
+        forwards = false,
+        skip_count = 0,
+        skip_delay = 25,
+        speed = 110;
+      var wordflick = function () {
+        setInterval(function () {
+          if (forwards) {
+            if (offset >= words[i].length) {
+              ++skip_count;
+              if (skip_count == skip_delay) {
+                forwards = false;
+                skip_count = 0;
+              }
+            }
+          } else {
+            if (offset == 0) {
+              forwards = true;
+              i++;
+              offset = 0;
+              if (i >= len) {
+                i = 0;
+              }
+            }
+          }
+          part = words[i].substr(0, offset);
+          if (skip_count == 0) {
+            if (forwards) {
+              offset++;
+            } else {
+              offset--;
+            }
+          }
+          $(".word").text(part);
+        }, speed);
+      };
+      $(document).ready(function () {
+        wordflick();
+      });
+    </script>
+    <script>
+      var words2 = [" Make your brand stand out"],
+        part,
+        i = 0,
+        offset = 0,
+        len = words2.length,
+        forwards = false,
+        skip_count = 0,
+        skip_delay = 25,
+        speed = 110;
+      var wordflick2 = function () {
+        setInterval(function () {
+          if (forwards) {
+            if (offset >= words2[i].length) {
+              ++skip_count;
+              if (skip_count == skip_delay) {
+                forwards = false;
+                skip_count = 0;
+              }
+            }
+          } else {
+            if (offset == 0) {
+              forwards = true;
+              i++;
+              offset = 0;
+              if (i >= len) {
+                i = 0;
+              }
+            }
+          }
+          part = words2[i].substr(0, offset);
+          if (skip_count == 0) {
+            if (forwards) {
+              offset++;
+            } else {
+              offset--;
+            }
+          }
+          $(".words2").text(part);
+        }, speed);
+      };
+      $(document).ready(function () {
+        wordflick2();
+      });
+    </script>
+    <!-- <script>
+      
+      const texts = [
+        "Search for something…",
+        "Search for other…",
+        "One more search",
+      ];
+      const input = document.querySelector("#searchbox");
+      const animationWorker = function (input, texts) {
+        this.input = input;
+        this.defaultPlaceholder = this.input.getAttribute("placeholder");
+        this.texts = texts;
+        this.curTextNum = 0;
+        this.curPlaceholder = "";
+        this.blinkCounter = 0;
+        this.animationFrameId = 0;
+        this.animationActive = false;
+        this.input.setAttribute("placeholder", this.curPlaceholder);
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        this.switch = (timeout) => {
+          this.input.classList.add("imitatefocus");
+          setTimeout(() => {
+            this.input.classList.remove("imitatefocus");
+            if (this.curTextNum == 0)
+              this.input.setAttribute("placeholder", this.defaultPlaceholder);
+            else this.input.setAttribute("placeholder", this.curPlaceholder);
+
+            setTimeout(() => {
+              this.input.setAttribute("placeholder", this.curPlaceholder);
+              if (this.animationActive)
+                this.animationFrameId = window.requestAnimationFrame(
+                  this.animate
+                );
+            }, timeout);
+          }, timeout);
+        };
+
+        this.animate = () => {
+          if (!this.animationActive) return;
+          let curPlaceholderFullText = this.texts[this.curTextNum];
+          let timeout = 900;
+          if (
+            this.curPlaceholder == curPlaceholderFullText + "|" &&
+            this.blinkCounter == 3
+          ) {
+            this.blinkCounter = 0;
+            this.curTextNum =
+              this.curTextNum >= this.texts.length - 1
+                ? 0
+                : this.curTextNum + 1;
+            this.curPlaceholder = "|";
+            this.switch(3000);
+            return;
+          } else if (
+            this.curPlaceholder == curPlaceholderFullText + "|" &&
+            this.blinkCounter < 3
+          ) {
+            this.curPlaceholder = curPlaceholderFullText;
+            this.blinkCounter++;
+          } else if (
+            this.curPlaceholder == curPlaceholderFullText &&
+            this.blinkCounter < 3
+          ) {
+            this.curPlaceholder = this.curPlaceholder + "|";
+          } else {
+            this.curPlaceholder =
+              curPlaceholderFullText
+                .split("")
+                .slice(0, this.curPlaceholder.length + 1)
+                .join("") + "|";
+            timeout = 150;
+          }
+          this.input.setAttribute("placeholder", this.curPlaceholder);
+          setTimeout(() => {
+            if (this.animationActive)
+              this.animationFrameId = window.requestAnimationFrame(
+                this.animate
+              );
+          }, timeout);
+        };
+
+        this.stop = () => {
+          this.animationActive = false;
+          window.cancelAnimationFrame(this.animationFrameId);
+        };
+
+        this.start = () => {
+          this.animationActive = true;
+          this.animationFrameId = window.requestAnimationFrame(this.animate);
+          return this;
+        };
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        let aw = new animationWorker(input, texts).start();
+        input.addEventListener("focus", (e) => aw.stop());
+        input.addEventListener("blur", (e) => {
+          aw = new animationWorker(input, texts);
+          if (e.target.value == "") setTimeout(aw.start, 2000);
+        });
+      });
+    </script> -->
+    <!-- <script>
+      var words3 = ["Branding Consulting"],
+        part3,
+        i = 0,
+        offset = 0,
+        len = words3.length,
+        forwards = false,
+        skip_count = 0,
+        skip_delay = 25,
+        speed = 110;
+      var wordflick3 = function () {
+        setInterval(function () {
+          if (forwards) {
+            if (offset >= words3[i].length) {
+              ++skip_count;
+              if (skip_count == skip_delay) {
+                forwards = false;
+                skip_count = 0;
+              }
+            }
+          } else {
+            if (offset == 0) {
+              forwards = true;
+              i++;
+              offset = 0;
+              if (i >= len) {
+                i = 0;
+              }
+            }
+          }
+          part3 = words3[i].substr(0, offset);
+          if (skip_count == 0) {
+            if (forwards) {
+              offset++;
+            } else {
+              offset--;
+            }
+          }
+          $(".words3").text(part3);
+        }, speed);
+      };
+      $(document).ready(function () {
+        wordflick3();
+      });
+    </script> -->
+    <!-- <script>
+      const texts = [
+        "Search for something…",
+        "Search for other…",
+        "One more search",
+      ];
+      const input = document.querySelector("#searchbox");
+      const animationWorker = function (input, texts) {
+        this.input = input;
+        this.defaultPlaceholder = this.input.getAttribute("placeholder");
+        this.texts = texts;
+        this.curTextNum = 0;
+        this.curPlaceholder = "";
+        this.blinkCounter = 0;
+        this.animationFrameId = 0;
+        this.animationActive = false;
+        this.input.setAttribute("placeholder", this.curPlaceholder);
+
+        this.switch = (timeout) => {
+          this.input.classList.add("imitatefocus");
+          setTimeout(() => {
+            this.input.classList.remove("imitatefocus");
+            if (this.curTextNum == 0)
+              this.input.setAttribute("placeholder", this.defaultPlaceholder);
+            else this.input.setAttribute("placeholder", this.curPlaceholder);
+
+            setTimeout(() => {
+              this.input.setAttribute("placeholder", this.curPlaceholder);
+              if (this.animationActive)
+                this.animationFrameId = window.requestAnimationFrame(
+                  this.animate
+                );
+            }, timeout);
+          }, timeout);
+        };
+
+        this.animate = () => {
+          if (!this.animationActive) return;
+          let curPlaceholderFullText = this.texts[this.curTextNum];
+          let timeout = 900;
+          if (
+            this.curPlaceholder == curPlaceholderFullText + "|" &&
+            this.blinkCounter == 3
+          ) {
+            this.blinkCounter = 0;
+            this.curTextNum =
+              this.curTextNum >= this.texts.length - 1
+                ? 0
+                : this.curTextNum + 1;
+            this.curPlaceholder = "|";
+            this.switch(3000);
+            return;
+          } else if (
+            this.curPlaceholder == curPlaceholderFullText + "|" &&
+            this.blinkCounter < 3
+          ) {
+            this.curPlaceholder = curPlaceholderFullText;
+            this.blinkCounter++;
+          } else if (
+            this.curPlaceholder == curPlaceholderFullText &&
+            this.blinkCounter < 3
+          ) {
+            this.curPlaceholder = this.curPlaceholder + "|";
+          } else {
+            this.curPlaceholder =
+              curPlaceholderFullText
+                .split("")
+                .slice(0, this.curPlaceholder.length + 1)
+                .join("") + "|";
+            timeout = 150;
+          }
+          this.input.setAttribute("placeholder", this.curPlaceholder);
+          setTimeout(() => {
+            if (this.animationActive)
+              this.animationFrameId = window.requestAnimationFrame(
+                this.animate
+              );
+          }, timeout);
+        };
+
+        this.stop = () => {
+          this.animationActive = false;
+          window.cancelAnimationFrame(this.animationFrameId);
+        };
+
+        this.start = () => {
+          this.animationActive = true;
+          this.animationFrameId = window.requestAnimationFrame(this.animate);
+          return this;
+        };
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        let aw = new animationWorker(input, texts).start();
+        input.addEventListener("focus", (e) => aw.stop());
+        input.addEventListener("blur", (e) => {
+          aw = new animationWorker(input, texts);
+          if (e.target.value == "") setTimeout(aw.start, 2000);
+        });
+      });
+    </script> -->
   </body>
 </html>
