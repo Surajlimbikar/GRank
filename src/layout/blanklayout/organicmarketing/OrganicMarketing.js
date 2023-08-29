@@ -1,7 +1,137 @@
 import React from "react";
+import Header from "../header2/Header";
+import { motion } from "framer-motion";
+import Slider from "react-slick";
 const OrganicMarketing = () => {
+  const settings3 = {
+    // dots: true,
+    infinite: true,
+    speed: 1000,
+    autoplay: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    autoplaySpeed: 2000,
+    // arrows: false,
+    // className: "notes-slider",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <>
+      <section className="section-top">
+        <Header />
+        <div className="branding-consulting-banner">
+          <img
+            className="img-fluid w-100"
+            src="assest/photos/organicmarketing/organic-marketing-banner.png"
+            alt="G-Rank"
+          />
+          <div className="branding-cunsulting-banner-new-div">
+            <h1 data-text="Brand Strategy">
+              {/* <span class="words3"></span> */}
+              Brand
+              <br />
+              Strategy
+            </h1>
+            <h2>Crafting Brands that Captivate!</h2>
+
+            <motion.h3
+              href="#"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <a href="#">Get Started</a>
+            </motion.h3>
+          </div>
+        </div>
+
+        {/* Quick Link section start */}
+        <section>
+          <div className="container-fluid">
+            <div>
+              <motion.h2
+                className="branding-quick-link"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+                Quick Link
+                <p className="d-block"> For You</p>
+              </motion.h2>
+              <Slider {...settings3}>
+                <div className="slider-div2">
+                  <h1 className="slider-img2">Branding</h1>
+                </div>
+                <div className="slider-div2">
+                  <h1 className="slider-img2">
+                    Creative & <p className="d-block"> Content</p>
+                  </h1>
+                </div>
+                <div className="slider-div2">
+                  <h1 className="slider-img2">
+                    Organic <p className="d-block"> marketing</p>
+                  </h1>
+                </div>
+
+                <div className="slider-div2">
+                  <h1 className="slider-img2">
+                    Performance <p className="d-block"> marketing</p>
+                  </h1>
+                </div>
+                <div className="slider-div2">
+                  <h1 className="slider-img2">Social Media</h1>
+                </div>
+                <div className="slider-div2">
+                  <h1 className="slider-img2">
+                    Web <p className="d-block"> Development</p>
+                  </h1>
+                </div>
+                <div className="slider-div2">
+                  <h1 className="slider-img2">Domain</h1>
+                </div>
+                <div className="slider-div2">
+                  <h1 className="slider-img2">
+                    Web <p className="d-block"> Hosting</p>{" "}
+                  </h1>
+                </div>
+                <div className="slider-div2">
+                  <h1 className="slider-img2">Security</h1>
+                </div>
+                <div className="slider-div2">
+                  <h1 className="slider-img2">Email</h1>
+                </div>
+              </Slider>
+            </div>
+          </div>
+        </section>
+        {/* Quick Link section end */}
+      </section>
       {/* <section className="section-top">
         <div className="pt-bottom-header bgwhite">
           <div className="container p-0">
