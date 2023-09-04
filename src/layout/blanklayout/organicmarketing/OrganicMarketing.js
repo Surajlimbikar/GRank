@@ -1,7 +1,8 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import Header from "../header2/Header";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 const OrganicMarketing = () => {
   const settings3 = {
     // dots: true,
@@ -41,35 +42,248 @@ const OrganicMarketing = () => {
       },
     ],
   };
+  // video autoplay start
+  const vidRef = useRef();
+  useEffect(() => {
+    vidRef.current.play();
+  }, []);
+  // video autoplay end
   return (
     <>
       <section className="section-top">
         <Header />
-        <div className="branding-consulting-banner">
+        {/* banner start */}
+        <div className="organic-marketing-banner">
           <img
             className="img-fluid w-100"
             src="assest/photos/organicmarketing/organic-marketing-banner.png"
             alt="G-Rank"
           />
-          <div className="branding-cunsulting-banner-new-div">
-            <h1 data-text="Brand Strategy">
-              {/* <span class="words3"></span> */}
-              Brand
-              <br />
-              Strategy
-            </h1>
-            <h2>Crafting Brands that Captivate!</h2>
-
-            <motion.h3
-              href="#"
+          <div className="organic-marketing-banner-new-div">
+            <motion.img
+              className="img-fluid w-100"
+              src="assest/photos/organicmarketing/organic-yellow-patch2.png"
+              alt="G-Rank"
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              <a href="#">Get Started</a>
-            </motion.h3>
+              transition={{ duration: 1 }}
+            />
+            <h1 data-text="Organic Marketing">
+              <span class="words3"></span>
+              Organic
+              <br />
+              Marketing
+            </h1>
+            <h2>Marketing Done Right!</h2>
+
+            <h3 href="#">
+              <a href="#">Explore</a>
+            </h3>
+            <div className="div2-p2">
+              <motion.p
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <span className="voilet">300% </span>
+                <br />
+                Organic growth <br />
+                Quarterly
+              </motion.p>
+            </div>
+            <div>
+              <motion.p
+                className="p2"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+              >
+                Retain more than <span className="pink">150+</span>
+                <br /> customers through Organic <br />
+                Marketing
+              </motion.p>
+            </div>
           </div>
         </div>
+        {/* banner end */}
+        {/* Question mark start */}
+        <section className="question-section">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12 col-md-4 col-lg-4">
+                <img
+                  className="img-fluid w-100 shakex"
+                  src="assest/photos/organicmarketing/organic-marketing-question-img.png"
+                  alt="G-Rank"
+                />
+              </div>
+              <div className="col-12 col-md-8 col-lg-8 question-div">
+                <motion.h1
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  Why Choose G-Rank?
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  At G-Rank, we excel in elevating your online presence with
+                  cutting-edge strategies. Our expert team is dedicated to every
+                  project, utilizing their in-depth knowledge of search engine
+                  algorithms and user behavior. We craft personalized strategies
+                  to drive targeted traffic to your website. Authenticity and
+                  long-term growth are our priorities, as we focus on
+                  sustainable organic marketing techniques that build a strong
+                  foundation for your online brand, ensuring lasting success.
+                </motion.p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Question mark end */}
+        {/* video section start */}
+        <section className="video-section">
+          <video
+            className="img-fluid oragnic-marketing-video"
+            src="assest/videos/organic-marketing-video.mp4"
+            ref={vidRef}
+            muted
+            autoPlay
+            loop
+          />
+          <div className="videos-text">
+            <h1>Grow Your Business Organically</h1>
+            <p>
+              In today's fiercely competitive digital landscape, businesses must
+              employ effective strategies to build customer trust. As an agency,
+              we understand the significance of organic marketing, a powerful
+              strategy that creates valuable content for prospective consumers
+              without incurring significant costs. Our approach to organic
+              marketing is rooted in a long-term perspective, aiming to attract
+              and convert people naturally without relying heavily on paid
+              advertising.
+            </p>
+          </div>
+        </section>
+        {/* video section end */}
+        {/* marketing service start */}
+        <section className="organic-market-service-section">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="org-mark-sem-text">
+                  <motion.h1
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    Our Organic Marketing Services
+                  </motion.h1>
+                  <p>
+                    We provide a wide range of services related to
+                    <br />
+                    Organic marketing. Our services include:
+                  </p>
+                </div>
+              </div>
+              <motion.div
+                className="col-12 col-md-4 col-lg-4"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2 }}
+              >
+                <motion.div
+                  className="organic-market-service-div"
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <img
+                    className="img-fluid "
+                    src="assest/photos/organicmarketing/organic-seo.png"
+                    alt="G-Rank"
+                  />
+                </motion.div>
+                <h1 className="organic-market-service-text">
+                  Search Engine <br />
+                  Optimization
+                </h1>
+              </motion.div>
+              <motion.div
+                className="col-12 col-md-4 col-lg-4"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2 }}
+              >
+                <motion.div
+                  className="organic-market-service-div"
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <img
+                    className="img-fluid "
+                    src="assest/photos/organicmarketing/organic-social-media.png"
+                    alt="G-Rank"
+                  />
+                </motion.div>
+                <h1 className="organic-market-service-text">
+                  Social Media <br />
+                  Optimization
+                </h1>
+              </motion.div>
+              <motion.div
+                className="col-12 col-md-4 col-lg-4"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2 }}
+              >
+                <motion.div
+                  className="organic-market-service-div"
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <img
+                    className="img-fluid "
+                    src="assest/photos/organicmarketing/organic-content-marketing.png"
+                    alt="G-Rank"
+                  />
+                </motion.div>
+                <h1 className="organic-market-service-text">
+                  Content
+                  <br /> Marketing
+                </h1>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+        {/* marketing service end */}
+        {/* action yellow start*/}
+        <div className="action-yellow-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-yellow-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div>
+        {/* action yellow end*/}
 
         {/* Quick Link section start */}
         <section>
@@ -81,7 +295,7 @@ const OrganicMarketing = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                Quick Link
+                Quick Links
                 <p className="d-block"> For You</p>
               </motion.h2>
               <Slider {...settings3}>
@@ -131,6 +345,11 @@ const OrganicMarketing = () => {
           </div>
         </section>
         {/* Quick Link section end */}
+        <img
+          className="img-fluid w-100"
+          src="assest/photos/branding/branding-footer-img.png"
+          alt="G-Rank"
+        />
       </section>
       {/* <section className="section-top">
         <div className="pt-bottom-header bgwhite">

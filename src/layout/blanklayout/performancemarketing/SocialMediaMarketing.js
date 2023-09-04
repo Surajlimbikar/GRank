@@ -54,7 +54,7 @@ const SocialMediaMarketing = () => {
           />
           <div className="performance-smm-banner-div">
             <h1>
-              Search Engine
+              Search Media
               <br />
               Marketing
             </h1>
@@ -173,50 +173,50 @@ const SocialMediaMarketing = () => {
         {/* what we do start */}
         <div className="container-fluid branding-sem-consulting-what">
           <div className="row">
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="col-12 branding-sem-consulting-what-heading"
-            >
-              <h1>What</h1>
-              <h2>we Do</h2>
-            </motion.div>
-            <div className="col-12 col-md-7 col-lg-7 branding-sem-consulting-what-text">
-              <div>
+            <div className="col-12 col-md-7 col-lg-7 ">
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className=" branding-sem-consulting-what-heading"
+              >
+                <h1>What</h1>
+                <h2>we Do</h2>
+              </motion.div>
+              <div className="branding-sem-consulting-what-text">
                 <p>
                   Tailored online marketing solutions aligned with business
-                  objectives.
+                  objectives
                 </p>
                 <p>
                   Tailored online marketing solutions aligned with business
-                  objectives.
+                  objectives
                 </p>
                 <p>
                   Team of skilled professionals with deep industry knowledge of
-                  social media trends and strategies.
+                  social media trends and strategies
                 </p>
                 <p>
                   Customized solutions for uniqueness of each business, ensuring
-                  high effectiveness.
+                  high effectiveness
                 </p>
                 <p>
                   Prominent social media marketing agency in Bangalore and
-                  Hyderabad.
+                  Hyderabad
                 </p>
                 <p>
                   Comprehensive services: strategic planning, content creation,
-                  social media advertising, and analytics.
+                  social media advertising, and analytics
                 </p>
                 <p>
                   Collaborative approach to understand goals and target
-                  audience, creating data-driven strategies.
+                  audience, creating data-driven strategies
                 </p>
                 <p>
                   Commitment to staying ahead in social media marketing by
-                  monitoring trends, updates, and user behavior.
+                  monitoring trends, updates, and user behavior
                 </p>
-                <p>Ongoing campaign optimization for maximum ROI.</p>
+                <p>Ongoing campaign optimization for maximum ROI</p>
               </div>
             </div>
             <div className="col-12 col-md-5 col-lg-5 ">
@@ -243,7 +243,7 @@ const SocialMediaMarketing = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                Quick Link
+                Quick Links
                 <p className="d-block"> For You</p>
               </motion.h2>
               <Slider {...settings3}>

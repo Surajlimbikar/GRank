@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../header2/Header";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 const BrandCommunication = () => {
   const settings3 = {
     // dots: true,
@@ -56,7 +57,7 @@ const BrandCommunication = () => {
               {/* <span class="words3"></span> */}
               Branding
               <br />
-              Comminication
+              Communication
             </h1>
             <h2>Elevate Your Brand with us!</h2>
 
@@ -185,20 +186,42 @@ const BrandCommunication = () => {
             </div>
           </div>
         </div>
+        {/* action black start*/}
+        <div className="action-black-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-black-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div>
+        {/* action black end*/}
         {/* what we do start */}
         <div className="container-fluid branding-consulting-what">
           <div className="row">
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="col-12 branding-consulting-what-heading"
-            >
-              <h1>What</h1>
-              <h2>we Do</h2>
-            </motion.div>
-            <div className="col-12 col-md-7 col-lg-7 branding-consulting-what-text">
-              <div>
+            <div className="col-12 col-md-7 col-lg-7 ">
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className=" branding-consulting-what-heading"
+              >
+                <h1>What</h1>
+                <h2>we Do</h2>
+              </motion.div>
+              <div className="branding-consulting-what-text">
                 <p>
                   G-Rank specializes in brand consulting services in Hyderabad
                   and Bangalore
@@ -267,7 +290,7 @@ const BrandCommunication = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                Quick Link
+                Quick Links
                 <p className="d-block"> For You</p>
               </motion.h2>
               <Slider {...settings3}>

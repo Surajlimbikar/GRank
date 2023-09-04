@@ -6,6 +6,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const PerformanceMarketing = () => {
   const settings3 = {
@@ -52,7 +53,7 @@ const PerformanceMarketing = () => {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 3,
+    slidesToShow: 4,
     speed: 500,
     nextArrow: <SampleNextArrow2 />,
     prevArrow: <SamplePrevArrow2 />,
@@ -191,6 +192,28 @@ const PerformanceMarketing = () => {
             </div>
           </div>
         </div>
+        {/* action yellow start*/}
+        <div className="action-yellow-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-yellow-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div>
+        {/* action yellow end*/}
         <div className="container-fluid performance-div3">
           <div className="row">
             <div className="col-12 col-md-5 col-lg-5 performance-div3-sec1">
@@ -328,7 +351,7 @@ const PerformanceMarketing = () => {
                 <div>
                   <img
                     className="img-fluid"
-                    src="assest/photos/performance-marketing/ad1.png"
+                    src="assest/photos/performance-marketing/ad4.png"
                     alt="G-Rank"
                   />
                 </div>
@@ -359,7 +382,7 @@ const PerformanceMarketing = () => {
                 <h1>Social Media Marketing</h1>
               </div>
             </div>
-            <div className="slider-div77">
+            {/* <div className="slider-div77">
               <div className="slider-div7">
                 <div>
                   <img
@@ -370,7 +393,7 @@ const PerformanceMarketing = () => {
                 </div>
                 <h1>Video Ads</h1>
               </div>
-            </div>
+            </div> */}
             <div className="slider-div77">
               <div className="slider-div7">
                 <div>
@@ -408,7 +431,7 @@ const PerformanceMarketing = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                Quick Link
+                Quick Links
                 <p className="d-block"> For You</p>
               </motion.h2>
               <Slider {...settings3}>

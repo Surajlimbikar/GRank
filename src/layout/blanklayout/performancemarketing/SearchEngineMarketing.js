@@ -142,10 +142,6 @@ const SearchEngineMarketing = () => {
                     alt="G-Rank"
                   />
                   <h1>Google Ads​</h1>
-
-                  <h5>Search Display​ ​ </h5>
-                  <h5> Remarketing</h5>
-                  <h5>Discovery​</h5>
                 </div>
                 <div className="col-4 col-md-4 col-lg-4 ads-batch-div2">
                   <img
@@ -170,49 +166,49 @@ const SearchEngineMarketing = () => {
         {/* what we do start */}
         <div className="container-fluid branding-sem-consulting-what">
           <div className="row">
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="col-12 branding-sem-consulting-what-heading"
-            >
-              <h1>What</h1>
-              <h2>we Do</h2>
-            </motion.div>
-            <div className="col-12 col-md-7 col-lg-7 branding-sem-consulting-what-text">
-              <div>
+            <div className="col-12 col-md-7 col-lg-7 ">
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className=" branding-sem-consulting-what-heading"
+              >
+                <h1>What</h1>
+                <h2>we Do</h2>
+              </motion.div>
+              <div className="branding-sem-consulting-what-text">
                 <p>
                   Recognizing the potential of pay-per-click (PPC) advertising
-                  for business growth.
+                  for business growth
                 </p>
                 <p>
                   Employing experienced professionals who use advanced
-                  strategies, meticulous research, and data-driven insights.
+                  strategies, meticulous research, and data-driven insights
                 </p>
                 <p>
                   Creating highly effective PPC campaigns tailored to individual
-                  business goals.
+                  business goals
                 </p>
                 <p>
                   Offering comprehensive services including keyword research, ad
                   creation, campaign management, bid optimization, and
-                  performance tracking.
+                  performance tracking
                 </p>
                 <p>
                   Staying up-to-date with industry trends and innovations to
-                  maintain campaign effectiveness.
+                  maintain campaign effectiveness
                 </p>
                 <p>
                   Providing location-specific PPC services for targeted audience
-                  reach (e.g., PPC services in Bangalore and Hyderabad).
+                  reach (e.g., PPC services in Bangalore and Hyderabad)
                 </p>
                 <p>
                   Emphasizing transparency through detailed reporting and
-                  continuous optimization.
+                  continuous optimization
                 </p>
                 <p>
                   Consistently monitoring campaigns, using data-driven
-                  adjustments to maximize ROI and competitiveness.
+                  adjustments to maximize ROI and competitiveness
                 </p>
               </div>
             </div>
@@ -240,7 +236,7 @@ const SearchEngineMarketing = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                Quick Link
+                Quick Links
                 <p className="d-block"> For You</p>
               </motion.h2>
               <Slider {...settings3}>

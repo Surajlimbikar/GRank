@@ -121,6 +121,35 @@
     height: 16vh;
     text-align: center;
   }
+  /* organic marketing start */
+  .organic-marketing-banner-new-div > img {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 680px;
+  }
+  .organic-marketing-banner-new-div > div > p {
+    background-color: #f8f9fa;
+    text-align: start;
+    border-radius: 5px;
+    font-family: "arial";
+    font-size: 20px;
+    /* min-width: 147px; */
+    width: 250px;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+  .organic-marketing-banner-new-div > div > .p2 {
+    background-color: #f8f9fa;
+    text-align: start;
+    border-radius: 5px;
+    font-family: "arial";
+    font-size: 21px;
+    width: 350px;
+    padding: 20px 23px;
+    margin-bottom: 20px;
+  }
+  /* organic marketing end */
 }
 
 /* - mobile devices(for few devices depending on the requirement) */
@@ -749,21 +778,21 @@
   .branding-consulting-what-heading {
     padding: 20px 25px;
   }
-  .branding-consulting-what-text > div {
+  .branding-consulting-what-text {
     overflow-y: scroll;
     direction: rtl;
     height: 400px;
     margin-left: 10px;
     padding: 19px 26px;
   }
-  .branding-consulting-what-text > div > p {
+  .branding-consulting-what-text > p {
     font-size: 15px;
     font-family: "arial";
     margin-bottom: 28px;
     position: relative;
     line-height: 21px;
   }
-  .branding-consulting-what-text > div > p::before {
+  .branding-consulting-what-text > p::before {
     content: "";
     width: 7px;
     height: 7px;
@@ -812,6 +841,9 @@
     line-height: 20px;
     font-family: "arial-bold";
     margin-top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 5%;
     text-transform: uppercase;
   }
   /* branding consulting page  */
@@ -1205,7 +1237,7 @@
     margin-top: 4px;
     margin-bottom: 6px;
   }
-  .branding-sem-consulting-what-text > div {
+  .branding-sem-consulting-what-text {
     overflow-y: scroll;
     /* direction: ltr; */
     direction: rtl;
@@ -1246,7 +1278,7 @@
     margin-top: 20px;
     margin-bottom: 60px;
   }
-  .branding-sem-consulting-what-text > div > p {
+  .branding-sem-consulting-what-text > p {
     font-size: 16px;
     font-family: "arial";
     margin-bottom: 24px;
@@ -1255,8 +1287,126 @@
     line-height: 23px;
   }
   /* performance-smm page */
-
   /* performance-marketing end */
+  /* organic marketing start */
+  .organic-marketing-banner-new-div > img {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 128px;
+  }
+  .organic-marketing-banner-new-div > h1 {
+    position: absolute;
+    font-size: 2vh;
+    top: 11%;
+    left: 34px;
+    color: transparent;
+    -webkit-text-stroke: 0.3vw transparent;
+    text-transform: uppercase;
+  }
+  .organic-marketing-banner-new-div > h2 {
+    font-size: 10px;
+    top: 23%;
+    left: 34px;
+    position: absolute;
+    color: #37474f;
+    line-height: 56px;
+    font-family: "arial-bold";
+  }
+  .organic-marketing-banner-new-div > h3 > a {
+    padding: 1px 21px;
+    position: absolute;
+    top: 48%;
+    left: 31px;
+    font-size: 9px;
+    border-radius: 23px;
+    background: linear-gradient(to left, #436fe8 50%, #fff 50%) right;
+    color: #fff;
+    background-size: 200%;
+    transition: 0.5s ease-out;
+  }
+  .organic-marketing-banner-new-div > .div2-p2 {
+    display: none;
+  }
+  .organic-marketing-banner-new-div > div {
+    display: none;
+  }
+  .question-div > h1 {
+    color: #436fe8;
+    font-size: 23px;
+    margin-bottom: 50px;
+    font-family: "arial-bold";
+    position: relative;
+  }
+  .question-div > h1::after {
+    position: absolute;
+    content: "";
+    bottom: -41%;
+    left: 0px;
+    background-color: #fed501;
+    border-radius: 10px;
+    width: 86px;
+    height: 4px;
+  }
+  .question-div > p {
+    font-size: 14px;
+    font-family: "arial-bold";
+    line-height: 23px;
+    padding-right: 0px;
+    color: #6c757d;
+  }
+  .videos-text > p {
+    font-size: 8px;
+    font-family: "arial";
+    line-height: 14px;
+    color: #fff;
+  }
+  .videos-text > h1 {
+    color: #fed501;
+    font-family: "arial-bold";
+    margin-bottom: 7px;
+    font-size: 15px;
+  }
+  .organic-market-service-div {
+    background-image: url("../../public/assest/photos/background-blue-slider.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 279px;
+    /* width: 103%; */
+    position: relative;
+    z-index: 1;
+  }
+  .organic-market-service-div > img {
+    position: absolute;
+    top: 50%;
+    width: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .organic-market-service-text {
+    text-align: center;
+    font-size: 17px;
+    font-family: "arial-bold";
+    color: #436fe8;
+    line-height: 25px;
+    position: relative;
+  }
+  .organic-market-service-text::before {
+    z-index: 0;
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    top: -310%;
+    left: 0;
+    border: 2px solid #ffc107;
+    width: 100%;
+    height: 215px;
+  }
+  .organic-market-service-section {
+    padding: 50px 0px;
+    padding-bottom: 0px;
+  }
+  /* organic marketing end */
 }
 
 /* - for tab devices */
@@ -1326,6 +1476,40 @@
     width: 38px;
     height: 70px;
   }
+  /* organic marketing start */
+  .organic-marketing-banner-new-div > img {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 394px;
+  }
+  .organic-marketing-banner-new-div > div > p {
+    background-color: #f8f9fa;
+    text-align: start;
+    border-radius: 5px;
+    font-family: "arial";
+    font-size: 15px;
+    /* min-width: 147px; */
+    width: 200px;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+  .organic-marketing-banner-new-div > div > .p2 {
+    background-color: #f8f9fa;
+    text-align: start;
+    border-radius: 5px;
+    font-family: "arial";
+    font-size: 15px;
+    width: 250px;
+    padding: 20px 23px;
+    margin-bottom: 20px;
+  }
+  .organic-marketing-banner-new-div > .div2-p2 {
+    position: absolute;
+    bottom: 30%;
+    right: 12px;
+  }
+  /* organic marketing end */
 }
 
 /* - 110% screen zoom */
@@ -1381,4 +1565,38 @@
     max-width: 650px;
     margin: 0 auto;
   }
+  /* organic marketing start */
+  .organic-marketing-banner-new-div > img {
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 450px;
+  }
+  .organic-marketing-banner-new-div > div > p {
+    background-color: #f8f9fa;
+    text-align: start;
+    border-radius: 5px;
+    font-family: "arial";
+    font-size: 15px;
+    /* min-width: 147px; */
+    width: 200px;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+  .organic-marketing-banner-new-div > div > .p2 {
+    background-color: #f8f9fa;
+    text-align: start;
+    border-radius: 5px;
+    font-family: "arial";
+    font-size: 15px;
+    width: 250px;
+    padding: 20px 23px;
+    margin-bottom: 20px;
+  }
+  .organic-marketing-banner-new-div > .div2-p2 {
+    position: absolute;
+    bottom: 26%;
+    right: 12px;
+  }
+  /* organic marketing end */
 }

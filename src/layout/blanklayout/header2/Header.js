@@ -236,11 +236,9 @@ const Header = () => {
                 About Us <ArrowDropDownIcon className="drop-arrow" />
                 {/* <FontAwesomeIcon icon="fa-brands fa-facebook-f" /> */}
               </a>
-              <ul className="child-menu">
-                <li className="parent-submenu">
-                  {/* <a className="about-us-submenu" href="#"> */}
-                  Industries
-                  {/* </a> */}
+              {/* <ul className="child-menu">
+                <li className="parent-submenu">              
+                  Industries                  
                   <ul className="child-submenu">
                     <li className="parent-thirdmenu">
                       B2B
@@ -267,11 +265,43 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-
+                <li>Case Studies</li>
+                <li>Blog</li>
+                <li>Careers</li>
+              </ul> */}
+              <ul className="child-menu">
+                <li className="parent-submenu">
+                  Industries
+                  <ul className="child-submenu">
+                    <li className="parent-thirdmenu">
+                      B2B
+                      <ul className="child-thirdmenu2">
+                        <li>Power</li>
+                        <li>HardWare</li>
+                        <li>Healthcare</li>
+                        <li>Tech</li>
+                        <li>Manufacturing</li>
+                        <li>Raw Material</li>
+                      </ul>
+                    </li>
+                    <li className="parent-thirdmenu">
+                      B2C
+                      <ul className="child-thirdmenu">
+                        <li>Real ESTATE</li>
+                        <li>Healthcare</li>
+                        <li>E-commerce</li>
+                        <li>Lifestyle</li>
+                        <li>Interiors & Furniture</li>
+                        <li>Education</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
                 <li>Case Studies</li>
                 <li>Blog</li>
                 <li>Careers</li>
               </ul>
+
               {/* <ul className="child-menu">
                 <div className="container-fluid">
                   <div className="row">
@@ -679,7 +709,7 @@ const Header = () => {
               <a className="about-us" href="#">
                 Domain
               </a>
-              <ul className="child-menu">
+              <ul className="child-menu2">
                 <li>Domain Booking</li>
                 <li>Domain Available</li>
                 <li>Domain Transfer</li>
@@ -689,7 +719,7 @@ const Header = () => {
               <a className="about-us" href="#">
                 Hosting
               </a>
-              <ul className="child-menu">
+              <ul className="child-menu2">
                 <li>Shared Hosting</li>
                 <li>Wordpress Hosting</li>
                 <li>Dedicated Hosting</li>
@@ -700,7 +730,7 @@ const Header = () => {
               <a className="about-us" href="#">
                 Security
               </a>
-              <ul className="child-menu">
+              <ul className="child-menu2">
                 <li>Standard SSL</li>
                 <li>Wildcard SSL</li>
                 <li>Organization Vaidation SSL (OV SSL)</li>
@@ -711,7 +741,7 @@ const Header = () => {
               <a className="about-us" href="#">
                 Email
               </a>
-              <ul className="child-menu">
+              <ul className="child-menu2">
                 <li>Google Workspace</li>
                 <li>Microsoft 365</li>
                 <li>Rediff Mail</li>

@@ -161,10 +161,11 @@ const Homes = () => {
   const settings4 = {
     speed: 2000,
     autoplay: true,
-
-    cssEase: "linear",
+    infinite: true,
+    // cssEase: "linear",
     // autoplaySpeed: 3000,
     // dots: true,
+    // waitForAnimate: false,
     arrows: false,
     infinite: true,
     slidesToShow: 2,
@@ -182,8 +183,8 @@ const Homes = () => {
     speed: 2000,
     autoplay: true,
     rtl: true,
-
-    cssEase: "linear",
+    infinite: true,
+    // cssEase: "linear",
     // autoplaySpeed: 3000,
     // dots: true,
     arrows: false,
@@ -587,7 +588,7 @@ const Homes = () => {
                       <h1>
                         WHAT
                         <span>WE</span>
-                        <span>DO</span>
+                        <span className="do">DO</span>
                       </h1>
                     </div>
                   </div>
@@ -642,15 +643,23 @@ const Homes = () => {
             >
               <div className="container-fluid">
                 <div className="row">
-                  <div className="col-12">
-                    <img
+                  <div className="col-12 col-md-7 col-lg-7 align-self-center">
+                    <motion.img
                       className="img-fluid  methodo-img"
                       src="assest/photos/methodology/methodo-banner.png"
                       alt="grank"
+                      initial={{ opacity: 0, scale: 0, x: 200 }}
+                      whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                      transition={{ duration: 0.6 }}
                     />
                   </div>
-                  <div className="col-12">
-                    <div className="methodo-texting">
+                  <div className="col-12 col-md-5 col-lg-5">
+                    <motion.div
+                      className="methodo-texting"
+                      initial={{ opacity: 0, scale: 0, y: 100 }}
+                      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                    >
                       <h1>Expanding Vision:</h1>
                       <p>
                         - Encourages clients to envision their business on a
@@ -670,7 +679,7 @@ const Homes = () => {
                         - Demonstrates our ability to deliver exceptional
                         results.
                       </p>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>
@@ -774,6 +783,28 @@ const Homes = () => {
           </div>
         </section>
         {/* our team section start */}
+        {/* action white start*/}
+        <div className="action-white-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-white-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div>
+        {/* action white end*/}
         {/* Testinomial section start */}
         <section className="testimonial-section-margin">
           <div className="container">
@@ -1077,10 +1108,10 @@ const Homes = () => {
           <div className="container">
             <div className="row">
               <div className="col-lg-5 align-self-center">
-                <h2 className="slider-heading2">Client Testimonial</h2>
+                <h2 className="slider-heading2">Client Testimonials</h2>
                 <p className="slider-heading-text">
-                  Building lasting relationships to thought <br />
-                  trust!
+                  Building lasting relationships throught <br />
+                  trust !!
                 </p>
                 {/* <a className="Client-testinomial-buttom" href="#">
                   <span className="text">Read More</span>
@@ -1721,6 +1752,94 @@ const Homes = () => {
           </div>
         </section>
         {/* FAQ section end*/}
+        {/* action black start*/}
+        {/* <div className="action-black-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-black-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div> */}
+        {/* action black end */}
+        {/* action white start*/}
+        {/* <div className="action-white-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-white-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div> */}
+        {/* action white end*/}
+        {/* action blue start*/}
+        {/* <div className="action-blue-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-blue-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div> */}
+        {/* action blue end*/}
+        {/* action yellow start*/}
+        {/* <div className="action-yellow-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-yellow-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div> */}
+        {/* action yellow end*/}
         {/* Quick Link section start */}
         <section>
           <div className="container-fluid">
@@ -1731,7 +1850,7 @@ const Homes = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                Quick Link For You
+                Quick Links For You
               </motion.h2>
               <Slider {...settings3}>
                 <div className="slider-div2">

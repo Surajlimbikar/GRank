@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Header from "../header2/Header";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const BrandingConsulting = () => {
   const settings3 = {
@@ -187,62 +188,84 @@ const BrandingConsulting = () => {
             </div>
           </div>
         </div>
+        {/* action black start*/}
+        <div className="action-black-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-black-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div>
+        {/* action black end*/}
         {/* what we do start */}
         <div className="container-fluid branding-consulting-what">
           <div className="row">
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="col-12 branding-consulting-what-heading"
-            >
-              <h1>What</h1>
-              <h2>we Do</h2>
-            </motion.div>
-            <div className="col-12 col-md-7 col-lg-7 branding-consulting-what-text">
-              <div>
+            <div className="col-12 col-md-7 col-lg-7 ">
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className=" branding-consulting-what-heading"
+              >
+                <h1>What</h1>
+                <h2>we Do</h2>
+              </motion.div>
+              <div className="branding-consulting-what-text">
                 <p>
                   G-Rank specializes in brand consulting services in Hyderabad
-                  and Bangalore.
+                  and Bangalore
                 </p>
                 <p>
                   They are one of the leading brand consulting firms in these
-                  cities.
+                  cities
                 </p>
                 <p>
                   The focus of their services is to help businesses unlock their
                   true potential and establish a strong brand presence in the
-                  market.
+                  market
                 </p>
                 <p>
                   They understand the importance of a well-defined brand
-                  strategy.
+                  strategy
                 </p>
                 <p>
                   Their experienced consultants work closely with clients to
                   develop comprehensive brand strategies aligned with their
-                  unique business objectives.
+                  unique business objectives
                 </p>
                 <p>
                   The approach is highly collaborative, believing that close
-                  partnerships with clients yield the best results.
+                  partnerships with clients yield the best results
                 </p>
                 <p>
                   They listen, analyze, and strategize to ensure customized
-                  solutions that meet specific requirements.
+                  solutions that meet specific requirements
                 </p>
                 <p>
                   Services offered encompass brand positioning messaging,
-                  identity design, and management.
+                  identity design, and management
                 </p>
                 <p>
                   They help create a compelling brand story that sets clients
                   apart from the competition and captures the essence of their
-                  business.
+                  business
                 </p>
                 <p>
                   The aim is to revitalize clients' brands through innovative
-                  solutions that drive brand growth and enhance market presence.
+                  solutions that drive brand growth and enhance market presence
                 </p>
               </div>
             </div>
@@ -269,7 +292,7 @@ const BrandingConsulting = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                Quick Link
+                Quick Links
                 <p className="d-block"> For You</p>
               </motion.h2>
               <Slider {...settings3}>

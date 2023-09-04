@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../header2/Header";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const Branding = () => {
   const settings3 = {
@@ -142,7 +143,12 @@ const Branding = () => {
         <div className="branding-why-div">
           <div className="container ">
             <div className="row">
-              <div className="col-12 col-md-6 col-lg-6 branding-why-text1">
+              <motion.div
+                className="col-12 col-md-6 col-lg-6 branding-why-text1"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+              >
                 <div className="branding-why-img">
                   <img
                     className="img-fluid "
@@ -150,8 +156,13 @@ const Branding = () => {
                     alt="G-Rank"
                   />
                 </div>
-              </div>
-              <div className="col-12 col-md-6 col-lg-6 branding-why-text">
+              </motion.div>
+              <motion.div
+                className="col-12 col-md-6 col-lg-6 branding-why-text"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+              >
                 <h1>Why choose us?</h1>
                 <p>
                   When it comes to branding, your business deserves an agency
@@ -166,7 +177,7 @@ const Branding = () => {
                   lasting impression. Our creative team thrive on innovation and
                   fresh ideas.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -174,29 +185,70 @@ const Branding = () => {
           <div className="container ">
             <div className="row">
               <div className="col-12 col-md-6 col-lg-6 branding-process-text">
-                <h1>Our</h1>
-                <h2>Process</h2>
-                <p>
+                <motion.h1
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  Our
+                </motion.h1>
+                <motion.h2
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  Process
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1 }}
+                >
                   At G-Rank, we collaborate closely with you to create and
                   present an exceptional brand identity, tailored to your
                   objectives and intended audience. Our comprehensive approach
                   encompasses logo design, color palettes, imagery, and
                   typography, resulting in a unified and impactful brand
                   identity.
-                </p>
+                </motion.p>
               </div>
               <div className="col-12 col-md-6 col-lg-6 branding-process-text1">
                 <div className="branding-process-img">
-                  <img
+                  <motion.img
                     className="img-fluid "
                     src="assest/photos/branding/Process-img.png"
                     alt="G-Rank"
+                    initial={{ opacity: 0, scale: 0, y: 100 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 1 }}
                   />
                 </div>
               </div>
             </div>
           </div>
         </div>
+        {/* action yellow start*/}
+        <div className="action-yellow-div-text">
+          <motion.p
+            initial={{ opacity: 0, scale: 0, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Want to Elevate Your Brand?
+            <br /> Get in Touch.
+          </motion.p>
+          <a href="#">
+            <motion.p
+              className="action-yellow-div-buttom"
+              initial={{ opacity: 0, scale: 0, x: 100 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Contact Us <ArrowRightAltIcon />
+            </motion.p>
+          </a>
+        </div>
+        {/* action yellow end*/}
 
         <div className="branding-service-div">
           <div className="container-fluid">
@@ -208,7 +260,7 @@ const Branding = () => {
                 transition={{ duration: 0.6 }}
               >
                 <h1>Our</h1>
-                <h2>Branding Service</h2>
+                <h2>Branding Services</h2>
               </motion.div>
               <div className="col-12  branding-service-text1">
                 <motion.div
@@ -306,7 +358,7 @@ const Branding = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                Quick Link
+                Quick Links
                 <p className="d-block"> For You</p>
               </motion.h2>
               <Slider {...settings3}>
