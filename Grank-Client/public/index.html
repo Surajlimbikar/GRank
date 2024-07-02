@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- schema start -->
+    <meta name="robots" content="noindex" />
+    <!-- schema end-->
+
+    <title>G-Rank</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      npm
+      sta
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap link -->
+    <!-- youtube video popup start -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+    />
+    <!-- youtube video popup end -->
+    <script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script>
+    <!-- fnacy box -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <!-- fnacy box end -->
+
+    <script>
+      var words = ["Your Growth Our Commitment"],
+        part,
+        i = 0,
+        offset = 0,
+        len = words.length,
+        forwards = false,
+        skip_count = 0,
+        skip_delay = 25,
+        speed = 120;
+      var wordflick = function () {
+        setInterval(function () {
+          if (forwards) {
+            if (offset >= words[i].length) {
+              ++skip_count;
+              if (skip_count == skip_delay) {
+                forwards = false;
+                skip_count = 0;
+              }
+            }
+          } else {
+            if (offset == 0) {
+              forwards = true;
+              i++;
+              offset = 0;
+              if (i >= len) {
+                i = 0;
+              }
+            }
+          }
+          part = words[i].substr(0, offset);
+          if (skip_count == 0) {
+            if (forwards) {
+              offset++;
+            } else {
+              offset--;
+            }
+          }
+          $(".word").text(part);
+        }, speed);
+      };
+      $(document).ready(function () {
+        wordflick();
+      });
+      // text-branding
+      var words2 = [" Make your brand stand out"],
+        part,
+        i = 0,
+        offset = 0,
+        len = words2.length,
+        forwards = false,
+        skip_count = 0,
+        skip_delay = 25,
+        speed = 110;
+      var wordflick2 = function () {
+        setInterval(function () {
+          if (forwards) {
+            if (offset >= words2[i].length) {
+              ++skip_count;
+              if (skip_count == skip_delay) {
+                forwards = false;
+                skip_count = 0;
+              }
+            }
+          } else {
+            if (offset == 0) {
+              forwards = true;
+              i++;
+              offset = 0;
+              if (i >= len) {
+                i = 0;
+              }
+            }
+          }
+          part = words2[i].substr(0, offset);
+          if (skip_count == 0) {
+            if (forwards) {
+              offset++;
+            } else {
+              offset--;
+            }
+          }
+          $(".words2").text(part);
+        }, speed);
+      };
+      $(document).ready(function () {
+        wordflick2();
+      });
+      //  youtube
+      $(function () {
+        $(".popup-youtube, .popup-vimeo").magnificPopup({
+          disableOn: 700,
+          type: "iframe",
+          mainClass: "mfp-fade",
+          removalDelay: 160,
+          preloader: false,
+          fixedContentPos: false,
+        });
+      });
+    </script>
+    <!-- <script src="https://ebz-static.s3.ap-south-1.amazonaws.com/easecheckout/easebuzz-checkout.js"></script> -->
+    <!-- <script>
+      const proxyURL = "https://cors-anywhere.herokuapp.com/";
+      const requestURL = "http://api.suredbits.com/nfl/v0/stats/jones/julio";
+      $.getJSON(proxyURL + requestURL, function (playerData) {
+        console.log(playerData);
+      });
+    </script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <!-- <button id="ebz-checkout-btn">Proceed to Pay</button> -->
+    <!-- <script src="https://ebz-static.s3.ap-south-1.amazonaws.com/easecheckout/easebuzz-checkout.js"></script>
+    <script src="https://ebz-static.s3.ap-south-1.amazonaws.com/easecheckout/v2.0.0/easebuzz-checkout-v2.min.js"></script>
+    <script>
+      var easebuzzCheckout = new EasebuzzCheckout(
+        key,
+        "https://testpay.easebuzz.in/payment/initiateLink"
+      ); // for test enviroment pass "test"
+      document.getElementById("ebz-checkout-btn").onclick = function (e) {
+        var options = {
+          access_key: access_key, // access key received via Initiate Payment
+          onResponse: (response) => {
+            console.log(response);
+          },
+          theme: "#123456", // color hex
+        };
+        easebuzzCheckout.initiatePayment(options);
+      };
+    </script> -->
+  </body>
+</html>
